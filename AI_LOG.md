@@ -13,3 +13,4 @@ Resultado / Uso: La IA me ayudó a montar la función getAllHistorials. Me expli
 
 4. Le pedi a chatgpt que me pusiera bien lo de routes
 
+MODELO USADO: GEMINI gemini 3 flash
