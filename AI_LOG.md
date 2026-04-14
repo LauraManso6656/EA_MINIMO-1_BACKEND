@@ -15,6 +15,6 @@ Resultado / Uso: La IA me dio la estructura del try/catch para el controlador(fu
 
 Resultado / Uso: La IA me ayudó a montar la función getAllHistorials. Me explicó cómo usar el .skip() para saltarme los resultados de las páginas anteriores y el .limit() para no cargarlos todos de golpe. También me dio la lógica del $regex para el buscador, para que no haga falta escribir la palabra exacta para que encuentre los cambios. Yo lo adapté a mis variables y le añadí el .populate para que en la tabla me salga el nombre de la universidad en lugar de solo el ID. He indicado en un comentario la sección donde use la ia.
 
-4. Le pedi a chatgpt que me pusiera bien lo de routes
+4.La IA me generó el bloque de comentarios @openapi. Me di cuenta de que en el ejemplo (example) del buscador puso "UPC", pero se me olvidó cambiarlo, aunque el buscador realmente funciona filtrando por el nombre del campo (como "nombre"), que es lo que yo quería para auditar los cambios.
 
 MODELO USADO: GEMINI gemini 3 flash
