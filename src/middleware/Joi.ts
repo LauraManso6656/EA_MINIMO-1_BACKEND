@@ -2,6 +2,7 @@ import Joi, { ObjectSchema } from 'joi';
 import { NextFunction, Request, Response } from 'express';
 import { IUniversidad } from '../models/Universidad';
 import { IUsuario } from '../models/Usuario';
+import { IHistorial } from '../models/Historial';
 import Logging from '../library/Logging';
 
 export const ValidateJoi = (schema: ObjectSchema) => {
@@ -52,5 +53,23 @@ export const Schemas = {
                 .regex(/^[0-9a-fA-F]{24}$/)
                 .allow('', null)
         })
-    }
+    },
+
+        historial: {
+        create: Joi.object<IHistorial>({
+            universidad: Joi.string()
+                .regex(/^[0-9a-fA-F]{24}$/)
+                .required(),
+            cambios: Joi.array()
+                .items(Joi.object({
+                    camp: Joi.string().required(),
+                    valorAnterior: Joi.any(),
+                    valorNuevo: Joi.any()
+                }))
+                .required(),
+            fechaModificacion: Joi.date().default(Date.now)
+        })
+    }   
+
+    
 };

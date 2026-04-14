@@ -8,10 +8,10 @@ export interface IUniversidad {
     usuarios: Types.ObjectId[];
 }
 
-// Extiende Document para que sea compatible con los helpers de Mongoose (save, populate, etc.)
+
 export interface IUniversidadModel extends IUniversidad, Document { }
 
-// ─── Schema ───────────────────────────────────────────────────────────────────
+
 
 const UniversidadSchema: Schema<IUniversidadModel> = new Schema(
     {
@@ -40,7 +40,7 @@ const UniversidadSchema: Schema<IUniversidadModel> = new Schema(
     }
 );
 
-// ─── Model ────────────────────────────────────────────────────────────────────
+
 
 const Universidad = mongoose.model<IUniversidadModel>('Universidad', UniversidadSchema);
 
